@@ -23,7 +23,7 @@ sudo adduser Dang chrome-remote-desktop
 printf "\nThiết lập thành công! " >&2 ||
 printf "\nCó lỗi xảy ra! Hãy thử lại sau " >&2
 printf '\nKiểm tra https://remotedesktop.google.com/headless  Sao chép đường dẫn dành cho Debian/Linux vào đây:'
-read -p "Dán vào đây: " CRP
+read -p "\nDán vào đây: " CRP
 su - Dang -c """$CRP"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
