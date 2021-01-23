@@ -28,7 +28,7 @@ $endc$enda""";
 
 # Creation of user
 printf "\n\nĐang tạo người dùng... " >&2
-if sudo useradd -m user &> /dev/null
+if sudo useradd -m dang &> /dev/null
 then
   printf "\rNgười dùng đã được tạo $endc$enda\n" >&2
 else
@@ -37,10 +37,10 @@ else
 fi
 
 # Add user to sudo group
-sudo adduser user sudo
+sudo adduser dang sudo
 
 # Set password of user to 'root'
-echo 'user:root' | sudo chpasswd
+echo 'dang:1234' | sudo chpasswd
 
 # Change default shell from sh to bash
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
