@@ -121,7 +121,7 @@ printf "$g$b    Đang cài VLC Media Player $endc$enda" >&2
 {
     sudo apt install vlc -y
 } &> /dev/null &&
-printf "\r$c$b    VLC Media Player đã được caif $endc$enda\n" >&2 ||
+printf "\r$c$b    VLC Media Player đã được cài $endc$enda\n" >&2 ||
 printf "\r$r$b    Có lỗi xảy ra $endc$enda\n" >&2
 
 # Install other tools like nano
