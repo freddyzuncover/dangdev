@@ -142,13 +142,13 @@ printf "\n$g$b    Cài đặt hoàn thành! $endc$enda\n\n" >&2
 
 
 # Adding user to CRP group
-sudo adduser user chrome-remote-desktop
+sudo adduser dang chrome-remote-desktop
 
 # Finishing Work
 printf '\Click vào  http://remotedesktop.google.com/headless và dán code Debian vào đây\n'
 read -p "Dán vào đây: " CRP
-su - user -c """$CRP"""
+su - dang -c """$CRP"""
 
-printf "\n$c$b I hope everything done correctly if mistakenly wrote wrong command or pin, Rerun the current box or run command 'su - user -c '<CRP Command Here>' $endc$enda\n" >&2
+printf "\n$c$b I hope everything done correctly if mistakenly wrote wrong command or pin, Rerun the current box or run command 'su - dang -c '<CRP Command Here>' $endc$enda\n" >&2
 printf "\n$c$b https://remotedesktop.google.com/access to access your VM, do not close browser tab to keep colab running ' $endc$enda\n" >&2
 printf "\n$g$b Finished Succesfully$endc$enda"
