@@ -1,3 +1,5 @@
+#! /bin/bash
+
 clear
 
 printf "\n\nĐang tạo người dùng... " >&2
