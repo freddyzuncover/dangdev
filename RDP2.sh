@@ -70,7 +70,7 @@ printf "\r$c$b    Chrome Remote Desktop đã được cài $endc$enda\n" >&2 ||
 # Install Desktop Environment (XFCE4)
 printf "$g$b    Đang cài Desktop Environment $endc$enda" >&2
 {
-    sudo apt-get install cinnamon-desktop-environment
+    sudo apt -y install cinnamon-desktop-environment
     sudo systemctl disable lightdm.service
 } &> /dev/null &&
 printf "\r$c$b    Desktop Environment đã được cài $endc$enda\n" >&2 ||
