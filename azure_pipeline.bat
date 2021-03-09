@@ -1,4 +1,3 @@
-@echo off
 title Azure-Auto-Region
 
 echo Download all files...
