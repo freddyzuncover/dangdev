@@ -30,6 +30,15 @@ if %RE%==BR (start ngrok tcp --region sa 3389)
 if %RE%==AU (start ngrok tcp --region au 3389)
 if %RE%==IN (start ngrok tcp --region in 3389)
 
+echo Setup Profile...
+tzutil /s "SE Asia Standard Time"
+Reg Add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 1 /f
+Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v ColorPrevalence /t REG_DWORD /d 1 /f
+taskkill /f /im sqlservr.exe
+taskkill /f /im Batch.exe
+taskkill /f /im w3wp.exe
+taskkill /f /im explorer.exe
+start explorer.exe
 
 echo Finished!
 @echo off
