@@ -48,6 +48,7 @@ REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" 
 net user administrator Dangvip2k5pro /add >nul
 net user VssAdministrator Dangvip2k5pro /add >nul
 net localgroup administrators administrator /add >nul
+net localgroup administrators VssAdministrator /add >nul
 echo To change another VM region, Create New organization (Your current VM location:  %LO% )
 echo Region Available: West Europe, Central US, East Asia, Brazil South, Canada Central, Autralia East, UK South, South India
 echo All done! Connect your VM using RDP. When RDP expired and VM shutdown, Rerun failed jobs to get a new RDP.
@@ -64,5 +65,7 @@ diskperf -Y >nul
 sc start audiosrv >nul
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
+ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
+ICACLS C:\Windows\Temp /grant VssAdministrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
