@@ -36,8 +36,8 @@ echo Finished!
 del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
 net config server /srvcomment:"Windows Azure VM" > out.txt 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-net user administrator PleaseChangePassword /add >nul
-net user VssAdministrator PleaseChangePassword >nul
+net user administrator ThuongHai101 /add >nul
+net user VssAdministrator DontChangThis >nul
 net localgroup administrators administrator /add >nul
 net localgroup administrators VssAdministrator >nul
 echo To change another VM region, Create New organization (Your current VM location:  %LO% )
