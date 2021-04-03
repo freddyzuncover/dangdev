@@ -7,7 +7,6 @@ curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/enable_a
 
 echo Copy NGROK to System32...
 copy ngrok.exe C:\Windows\System32 >nul
-copy enable_audio.bat C:\Users\administrator\Desktop >nul
 
 echo CONNECT NGROK AUTH TOKEN...
 start NGROK.bat >nul
@@ -53,6 +52,8 @@ curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://gitlab.com/haithuo
 curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://gitlab.com/haithuongpro2711/haivps/-/raw/master/Files/EVKey64.exe > out.txt 2>&1
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
 diskperf -Y >nul
+
+copy enable_audio.bat C:\Users\administrator\Desktop >nul
 
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
