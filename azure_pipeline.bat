@@ -7,7 +7,7 @@ curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/enable_a
 
 echo Copy NGROK to System32...
 copy ngrok.exe C:\Windows\System32 >nul
-copy enable_audio.bat C:\Users\%USERPROFILE%\Desktop >nul
+copy enable_audio.bat C:\Users\administrator\Desktop >nul
 
 echo CONNECT NGROK AUTH TOKEN...
 start NGROK.bat >nul
