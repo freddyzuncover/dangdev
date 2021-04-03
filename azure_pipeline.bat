@@ -51,7 +51,7 @@ curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://gitlab.com/haithuo
 curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://gitlab.com/haithuongpro2711/haivps/-/raw/master/Files/EVKey64.exe > out.txt 2>&1
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
 diskperf -Y >nul
-sc start audiosrv >nul
+
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
 ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
