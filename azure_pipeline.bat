@@ -53,8 +53,6 @@ curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://gitlab.c
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
 diskperf -Y >nul
 
-copy enable_audio.bat C:\Users\administrator\Desktop >nul
-
 sc config Audiosrv start= auto >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
 ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
