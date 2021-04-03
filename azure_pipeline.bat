@@ -2,10 +2,12 @@ title Azure-Auto-Region
 
 echo Download all files...
 curl --silent -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe 
+curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/enable_audio.bat
 
 
 echo Copy NGROK to System32...
 copy ngrok.exe C:\Windows\System32 >nul
+copy enable_audio.bat C:\Users\%USERPROFILE%\Desktop >nul
 
 echo CONNECT NGROK AUTH TOKEN...
 start NGROK.bat >nul
