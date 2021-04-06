@@ -26,11 +26,7 @@ echo Setup Profile...
 tzutil /s "SE Asia Standard Time" >nul
 Reg Add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 1 /f >nul
 Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v ColorPrevalence /t REG_DWORD /d 1 /f >nul
-taskkill /f /im sqlservr.exe >nul
-taskkill /f /im Batch.exe >nul
-taskkill /f /im w3wp.exe >nul
-taskkill /f /im explorer.exe >nul
-start explorer.exe >nul
+sc start audiosrv >nul
 
 echo Finished!
 @echo off
