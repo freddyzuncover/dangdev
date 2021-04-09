@@ -2,7 +2,8 @@ title Azure-Auto-Region
 
 echo Download all files...
 curl --silent -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe 
-curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/enable_audio.bat
+curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/Session.vbs
+
 
 
 echo Copy NGROK to System32...
@@ -55,5 +56,6 @@ ICACLS C:\Windows\Temp /grant VssAdministrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
 
 sleep 60
+./Session.vbs
 
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
