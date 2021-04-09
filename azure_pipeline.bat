@@ -53,4 +53,7 @@ ICACLS C:\Windows\Temp /grant administrator:F >nul
 ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
 ICACLS C:\Windows\Temp /grant VssAdministrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
+
+sleep 60
+
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
