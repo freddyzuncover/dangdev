@@ -12,6 +12,8 @@ start ngrok tcp --region ap 3389
 
 echo Setup Profile...
 tzutil /s "SE Asia Standard Time" >nul
+Reg Add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 1 /f >nul
+Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v ColorPrevalence /t REG_DWORD /d 1 /f >nul
 sc start audiosrv >nul
 
 echo Finished!
@@ -32,10 +34,6 @@ curl -o "C:\Users\Public\Desktop\Enable Session notification.vbs" https://raw.gi
 diskperf -Y >nul
 
 sc config Audiosrv start= auto >nul
-ICACLS C:\Windows\Temp /grant administrator:F >nul
-ICACLS C:\Windows\installer /grant VssAdministrator:F >nul
-ICACLS C:\Windows\Temp /grant VssAdministrator:F >nul
-ICACLS C:\Windows\installer /grant administrator:F >nul
 
 
 ping -n 99999999999999999999999999999999 10.10.10.10 >nul
