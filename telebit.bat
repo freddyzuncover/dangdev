@@ -8,8 +8,6 @@ REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" 
 net user administrator VanDang1 /add >nul
 net localgroup administrators administrator /add >nul
 
-cd C:\Users\Administrator\.config\
-
 echo Download all files...
 curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/telebit.zip
 unzip telebit.zip "C:\Users\administrator\.config\"
