@@ -1,5 +1,15 @@
 title Telebit
 
+echo Step 1
+@echo off
+del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
+net config server /srvcomment:"VanDang" > out.txt 2>&1
+REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
+net user administrator VanDang1 /add >nul
+net localgroup administrators administrator /add >nul
+
+cd C:\Users\Administrator\.config\
+
 echo Setup Telebit
 npm install -g telebit
 
@@ -13,13 +23,6 @@ Reg Add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d
 Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v ColorPrevalence /t REG_DWORD /d 1 /f >nul
 sc start audiosrv >nul
 
-echo Finished!
-@echo off
-del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
-net config server /srvcomment:"VanDang" > out.txt 2>&1
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
-net user administrator VanDang1 /add >nul
-net localgroup administrators administrator /add >nul
 net user VssAdministrator VanDang1 >nul
 echo User: Administrator
 echo Pass: [Secret]
