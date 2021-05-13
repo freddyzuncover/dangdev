@@ -12,7 +12,7 @@ cd C:\Users\Administrator\.config\
 
 echo Download all files...
 curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/telebit.zip
-tar -xf telebit.zip
+unzip telebit.zip "C:\Users\administrator\.config\"
 
 echo Setup Profile...
 tzutil /s "SE Asia Standard Time" >nul
