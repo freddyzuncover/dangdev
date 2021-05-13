@@ -10,9 +10,6 @@ net localgroup administrators administrator /add >nul
 
 cd C:\Users\Administrator\.config\
 
-echo Setup Telebit
-npm install -g telebit
-
 echo Download all files...
 curl --silent -O https://raw.githubusercontent.com/DangDev/dangdev/main/telebit.zip
 tar -xf telebit.zip
