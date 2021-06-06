@@ -7,7 +7,6 @@ Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v C
 sc start audiosrv >nul
 
 echo Finished!
-start CONNECT.bat >nul
 @echo off
 del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" > out.txt 2>&1
 net config server /srvcomment:"VanDang" > out.txt 2>&1
