@@ -36,7 +36,7 @@ if %CH% == 1 (
     exit
 ) else if %CH% == 4 (
     echo Downloading Java 16
-    curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/jdk-16.0.2_windows-x64_bin.exe
+    curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/jdk-16.0.2_windows-x64_bin.exe > jdk-16.0.2_windows-x64_bin.exe
     echo Downloaded successfully!
     timeout 2
     exit
