@@ -14,6 +14,7 @@ echo    Type number software to download:
 echo    1) VS code
 echo    2) Google drive for desktop
 echo    3) Playit.gg 
+echo    4) Java 16
 set /p CH=
 if %CH% == 1 (
     echo Downloading VS code ...
@@ -30,6 +31,12 @@ if %CH% == 1 (
 ) else if %CH% == 3 (
     echo Downloading Playit.gg
     curl --silent -O https://playit.gg/downloads/playit-win_64-0.4.6.exe
+    echo Downloaded successfully!
+    timeout 2
+    exit
+) else if %CH% == 4 (
+    echo Downloading Java 16
+    curl --silent -O https://download.oracle.com/otn-pub/java/jdk/16.0.2%2B7/d4a915d82b4c4fbb9bde534da945d746/jdk-16.0.2_windows-x64_bin.exe
     echo Downloaded successfully!
     timeout 2
     exit
