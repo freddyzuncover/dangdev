@@ -19,7 +19,7 @@ set /p CH=
 if %CH% == 1 (
     echo Downloading VS code ...
     curl --silent -O https://az764295.vo.msecnd.net/stable/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/VSCodeUserSetup-x64-1.59.1.exe
-    VSCodeUserSetup-x64-1.59.1.exe /s
+    VSCodeUserSetup-x64-1.59.1.exe /VERYSILENT
     echo Downloaded successfully!
     timeout 2
     exit
