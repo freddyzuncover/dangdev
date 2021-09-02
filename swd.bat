@@ -20,6 +20,7 @@ if %CH% == 1 (
     echo Downloading VS code ...
     curl --silent -O https://az764295.vo.msecnd.net/stable/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa/VSCodeUserSetup-x64-1.59.1.exe
     VSCodeUserSetup-x64-1.59.1.exe /VERYSILENT
+    del /f VSCodeUserSetup-x64-1.59.1.exe
     echo Downloaded successfully!
     timeout 2
     exit
@@ -27,6 +28,7 @@ if %CH% == 1 (
     echo Downloading Google drive for desktop ...
     curl --silent -O https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe
     GoogleDriveSetup.exe /s
+    del /f GoogleDriveSetup.exe
     echo Downloaded successfully!
     timeout 2
     exit
@@ -40,6 +42,7 @@ if %CH% == 1 (
     echo Downloading Java 16
     curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/jdk-16.0.2_windows-x64_bin.exe > jdk-16.0.2_windows-x64_bin.exe
     jdk-16.0.2_windows-x64_bin.exe /s
+    del /f jdk-16.0.2_windows-x64_bin.exe
     echo Downloaded successfully!
     timeout 2
     exit
