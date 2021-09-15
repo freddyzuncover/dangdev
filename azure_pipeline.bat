@@ -43,6 +43,7 @@ curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.gith
 curl -o "C:\Users\Public\Desktop\Enable Session notification.vbs" https://raw.githubusercontent.com/DangDev/dangdev/main/Session.vbs > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\swd.bat" https://raw.githubusercontent.com/DangDev/dangdev/main/swd.bat > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\autoserver.bat" https://raw.githubusercontent.com/DangDev/dangdev/main/dang.bat > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\auto_bedrock.bat" https://raw.githubusercontent.com/DangDev/dangdev/main/auto_bedrock.bat > out.txt 2>&1
 diskperf -Y >nul
 
 sc config Audiosrv start= auto >nul
