@@ -6,6 +6,9 @@ title Auto Create Server
 echo Installing Java 16
 curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/jdk-16.0.2_windows-x64_bin.exe > jdk-16.0.2_windows-x64_bin.exe
 jdk-16.0.2_windows-x64_bin.exe /s
+set JAVA_HOME=C:\Program Files\Java\jdk-16.0.2
+set Path=%JAVA_HOME%\bin;%Path%
+echo Java 16 activated.
 
 echo Installing Google Drive for Desktop
 curl --silent -O https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe
