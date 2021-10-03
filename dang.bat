@@ -21,6 +21,8 @@ echo java -Xmx3070M -Xms3070M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGC
 start jump.bat
 
 echo Installing Playit.gg
-curl --silent -O https://playit.gg/downloads/playit-win_64-0.4.6.exe
-playit-win_64-0.4.6.exe
+curl --silent -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
+set /p TOKEN=Insert your Ngrok token: 
+ngrok.exe authtoken %TOKEN%
+ngrok.exe tcp -region=ap 25565
 PAUSE
