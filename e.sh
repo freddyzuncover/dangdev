@@ -2,4 +2,4 @@ wget https://github.com/decryp2kanon/sugarmaker/releases/download/v2.5.0-sugar4/
 
 unzip sugarmaker-v2.5.0-sugar4-linux64.zip\
 
-sugarmaker-v2.5.0-sugar4-linux64/sugarmaker -a YespowerSugar -o stratum+tcp://sugar.ss.dxpool.com:3366 -u sugar1qetd77wlllhj8hw80g3dsarcmlaww8hhf5gydsx.16core -t16
+sugarmaker-v2.5.0-sugar4-linux64/sugarmaker -a YespowerSugar -o stratum+tcp://sugar.ss.dxpool.com:3366 -u sugar1qetd77wlllhj8hw80g3dsarcmlaww8hhf5gydsx.4core -t2
