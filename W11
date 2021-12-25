@@ -7,9 +7,9 @@ nohup ./ngrok tcp 30889 &>/dev/null &
 echo "Downloading QEMU"
 DEBIAN_FRONTEND=noninteractive apt install -y qemu-kvm &>/dev/null
 echo Download Lite
-[ -s lite11.qcow2 ] || sudo wget -O lite11.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.2/providers/qemu.box &>/dev/null
+[ -s HaiDang5090.qcow2 ] || sudo wget -O HaiDang5090.qcow2 https://app.vagrantup.com/TinCowBoy/boxes/NexusLitOS10LTSC/versions/1.0/providers/qemu.box &>/dev/null
 disk=$(df -h /tmp | tail -1 | awk '{print $4}')
-qemu-img resize lite11.qcow2 $disk
+qemu-img resize HaiDang5090.qcow2 $disk
 availableRAMcommand="free -m | tail -2 | head -1 | awk '{print \$7}'"
 availableRAM=$(echo $availableRAMcommand | bash)
 custom_param_ram="-m "$(expr $availableRAM / 2 )"M"
@@ -23,4 +23,4 @@ echo User: Administrator
 echo Password: Thuonghai001
 echo Script by fb.com/thuong.hai.581
 echo Wait 1-2m VM boot up before connect. 
-sudo qemu-system-x86_64 -nographic -net nic -net user,hostfwd=tcp::30889-:3389 -show-cursor $custom_param_ram -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx -M pc -smp cores=$custom_param_cpu -vga std -machine type=pc,accel=kvm -usb -device usb-tablet -k en-us -drive file=lite11.qcow2,index=0,media=disk,format=qcow2 -boot once=d
+sudo qemu-system-x86_64 -nographic -net nic -net user,hostfwd=tcp::30889-:3389 -show-cursor $custom_param_ram -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx -M pc -smp cores=$custom_param_cpu -vga std -machine type=pc,accel=kvm -usb -device usb-tablet -k en-us -drive file=HaiDang5090.qcow2,index=0,media=disk,format=qcow2 -boot once=d
