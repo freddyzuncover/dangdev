@@ -6,7 +6,8 @@ clear
 nohup ./ngrok tcp --region ap 30889 &>/dev/null &
 echo "Downloading QEMU"
 DEBIAN_FRONTEND=noninteractive apt install -y qemu-kvm
-[ -s lite11.qcow2 ] || sudo wget -O lite11.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.2/providers/qemu.box
+echo Download Lite
+[ -s lite11.qcow2 ] || sudo wget -O lite11.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.2/providers/qemu.box &>/dev/null
 disk=$(df -h /tmp | tail -1 | awk '{print $4}')
 qemu-img resize lite11.qcow2 $disk
 availableRAMcommand="free -m | tail -2 | head -1 | awk '{print \$7}'"
