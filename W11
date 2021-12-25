@@ -3,7 +3,7 @@ DEBIAN_FRONTEND=noninteractive apt install unzip wget curl sudo -y &>/dev/null
 wget -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip &>/dev/null && unzip -o ngrok-stable-linux-amd64.zip &>/dev/null
 clear
 ./ngrok authtoken $TOKEN 
-nohup ./ngrok tcp 30889 &>/dev/null &
+nohup ./ngrok tcp 5900 &>/dev/null &
 echo "Downloading QEMU"
 DEBIAN_FRONTEND=noninteractive apt install -y qemu-kvm &>/dev/null
 echo Download Lite
@@ -23,4 +23,4 @@ echo User: Administrator
 echo Password: Thuonghai001
 echo Script by fb.com/thuong.hai.581
 echo Wait 1-2m VM boot up before connect. 
-sudo qemu-system-x86_64 -nographic -net nic -net user,hostfwd=tcp::30889-:3389 -show-cursor $custom_param_ram -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx -M pc -smp cores=$custom_param_cpu -vga std -machine type=pc,accel=kvm -usb -device usb-tablet -k en-us -drive file=HaiDang5090.qcow2,index=0,media=disk,format=qcow2 -boot once=d
+sudo qemu-system-x86_64 -nographic -net nic -net user -vnc :0 -show-cursor $custom_param_ram -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx -M pc -smp cores=$custom_param_cpu -vga std -machine type=pc,accel=kvm -usb -device usb-tablet -k en-us -drive file=HaiDang5090.qcow2,index=0,media=disk,format=qcow2 -boot once=d
