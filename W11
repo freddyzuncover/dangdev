@@ -19,7 +19,6 @@ echo "QEMU-KVM Windows 11 by fb.com/thuong.hai.581"
 echo "$custom_param_cpu / $custom_param_ram"
 echo Your RDP IP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
-echo $IP
 echo User: Administrator
 echo Password: Thuonghai001
 echo Script by fb.com/thuong.hai.581
