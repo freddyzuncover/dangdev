@@ -10,9 +10,9 @@ disk=$(df -h /tmp | tail -1 | awk '{print $4}')
 qemu-img resize lite11.qcow2 $disk &>/dev/null
 availableRAMcommand="free -m | tail -2 | head -1 | awk '{print \$7}'"
 availableRAM=$(echo $availableRAMcommand | bash)
-custom_param_ram="-m "$(expr $availableRAM / 2 )"M"
+custom_param_ram="-m "$(expr $availableRAM - 2048 )"M"
 cpus=$(lscpu | grep CPU\(s\) | head -1 | cut -f2 -d":" | awk '{$1=$1;print}')
-custom_param_cpu=$(expr $cpus / 2 )
+custom_param_cpu=$(expr $cpus)
 
 echo "QEMU-KVM Windows 11 by fb.com/thuong.hai.581"
 echo "$custom_param_cpu / $custom_param_ram"
