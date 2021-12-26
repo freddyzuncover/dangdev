@@ -2,7 +2,7 @@
 DEBIAN_FRONTEND=noninteractive apt install unzip wget curl sudo -y &>/dev/null
 wget -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip &>/dev/null && unzip -o ngrok-stable-linux-amd64.zip &>/dev/null
 ./ngrok authtoken $TOKEN &>/dev/null
-nohup ./ngrok tcp 30889 &>/dev/null &
+nohup ./ngrok tcp --region ap 30889 &>/dev/null &
 echo "Downloading QEMU"
 DEBIAN_FRONTEND=noninteractive apt install -y qemu-kvm &>/dev/null
 [ -s lite11.qcow2 ] || sudo wget -O lite11.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.2/providers/qemu.box &>/dev/null
