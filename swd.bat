@@ -41,7 +41,7 @@ if %CH% == 1 (
 ) else if %CH% == 4 (
     echo Downloading Java 16
     curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/zulu17.30.15-ca-jdk17.0.1-win_x64.msi > jdk17.msi
-    msiexec /i jdk17.msi /quiet /qn /norestart
+    msiexec /i jdk17.msi
     del /f jdk17.msi
     echo Downloaded successfully!
     timeout 2
