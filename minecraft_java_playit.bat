@@ -5,7 +5,7 @@ title Auto Create Server
 
 echo Installing Java 17
 curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/zulu17.30.15-ca-jdk17.0.1-win_x64.msi > jdk17.msi
-msiexec /i jdk17.msi /quiet /qn /norestart
+msiexec /i jdk17.msi
 set JAVA_HOME=C:\Program Files\Java\jdk-16.0.2
 set Path=%JAVA_HOME%\bin;%Path%
 echo Java 17 activated.
