@@ -18,5 +18,6 @@ start G:\"My Drive"\"Minecraft-server"\run.bat
 
 echo Installing Playit.gg
 curl -s -O https://playit.gg/downloads/playit-win_64-0.4.6.exe
+echo "{"agent_key":"7d1c7358ee585cf41c72741d93a3db444880fce5c62307c53147e71f6f15b028","preferred_tunnel":"sng5"}" >> %appdata%\playit\config.json
 playit-win_64-0.4.6.exe
 PAUSE
