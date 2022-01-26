@@ -1,2 +1,4 @@
 #!/bin/bash
+DEBIAN_FRONTEND=noninteractive sudo apt-get install docker-ce docker-ce-cli containerd.io &>/dev/null
+docker run --name ubuntu18.04 --privileged --shm-size 1g -d -p 5900:5900 -p 6080:6080 thuonghai2711/ubuntu-vnc:latest 
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p
