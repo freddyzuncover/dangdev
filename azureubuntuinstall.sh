@@ -7,7 +7,7 @@ az storage account create \
     --resource-group learn-76d383c6-6982-4490-8b3a-d71c39b09f6e
 
 az vm create \
-    --name monitored-linux-vm \
+    --name HaiDang \
     --image UbuntuLTS \
     --size Standard_D2s_v3 \
     --location southeastasia \
@@ -16,3 +16,5 @@ az vm create \
     --boot-diagnostics-storage $STORAGE \
     --resource-group learn-76d383c6-6982-4490-8b3a-d71c39b09f6e \
     --public-ip-sku Standard
+
+az vm open-port --port 3389 --resource-group learn-76d383c6-6982-4490-8b3a-d71c39b09f6e --name HaiDang
