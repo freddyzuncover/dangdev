@@ -1,6 +1,6 @@
 #!/bin/bash
 az group list -otable
-read GROUP
+read -p "Enter group name: " GROUP
 
 STORAGE=metricsstorage$RANDOM
 
