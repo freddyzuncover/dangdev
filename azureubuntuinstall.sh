@@ -1,3 +1,4 @@
+#!/bin/bash
 az group list -otable
 read -p "Enter your resource group name: " GROUP
 
