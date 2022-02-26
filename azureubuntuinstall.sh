@@ -1,10 +1,13 @@
+az group list -otable
+read -p "Enter your resource group name: " GROUP
+
 STORAGE=metricsstorage$RANDOM
 
 az storage account create \
     --name $STORAGE \
     --sku Standard_LRS \
     --location southeastasia \
-    --resource-group learn-76d383c6-6982-4490-8b3a-d71c39b09f6e
+    --resource-group $GROUP
 
 az vm create \
     --name HaiDang \
@@ -14,7 +17,7 @@ az vm create \
     --admin-username "tincowboy" \
     --admin-password "YeuAnhMai1luon" \
     --boot-diagnostics-storage $STORAGE \
-    --resource-group learn-76d383c6-6982-4490-8b3a-d71c39b09f6e \
+    --resource-group $GROUP \
     --public-ip-sku Standard
 
-az vm open-port --port 3389 --resource-group learn-76d383c6-6982-4490-8b3a-d71c39b09f6e --name HaiDang
+az vm open-port --port 3389 --resource-group $GROUP --name HaiDang
