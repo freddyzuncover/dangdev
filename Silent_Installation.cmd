@@ -21,4 +21,4 @@ Steam.exe /VERYSILENT
 curl -L -o Ubisoft.exe https://github.com/DangDev/dangdev/releases/download/Apps/UbisoftConnectInstaller.exe
 Ubisoft.exe /VERYSILENT
 curl -L -o EpicGames.msi https://github.com/DangDev/dangdev/releases/download/Apps/EpicInstaller-13.3.0.msi
-EpicGames.msi /VERYSILENT
+EpicGames.msi
