@@ -1,5 +1,6 @@
 @ECHO OFF
 Color 0B
+cd C:\Users\TinCowBoy\Desktop
 @cls
 echo.
 echo.
@@ -16,7 +17,7 @@ echo.
 @echo off
 curl -L -o Parsec.exe https://builds.parsecgaming.com/package/parsec-windows.exe
 Parsec.exe
-curl -L -o VAC.exe https://github.com/DangDev/dangdev/releases/download/Apps/VACSetup.exe
+curl -L -o VAC.zip https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip
 VAC.exe
 curl -L -o Steam.exe https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
 Steam.exe
