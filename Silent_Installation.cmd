@@ -1,6 +1,6 @@
 @ECHO OFF
 Color 0B
-cd C:\Users\TinCowBoy\Desktop
+cd %USERPROFILE%\Desktop
 @cls
 echo.
 echo.
