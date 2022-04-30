@@ -19,7 +19,7 @@ echo.
 @echo off
 curl -L -o Parsec.exe https://builds.parsecgaming.com/package/parsec-windows.exe
 Parsec.exe
-curl -L -o Steam.exe https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
+curl -L -o SteamSetup.exe https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
 SteamSetup.exe
 curl -L -o Ubisoft.exe https://github.com/DangDev/dangdev/releases/download/Apps/UbisoftConnectInstaller.exe
 Ubisoft.exe
