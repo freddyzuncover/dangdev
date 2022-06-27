@@ -14,7 +14,7 @@ echo    Type number software to download:
 echo    1) VS code
 echo    2) Google drive for desktop
 echo    3) Playit.gg 
-echo    4) Java 16
+echo    4) Java 17
 set /p CH=
 if %CH% == 1 (
     echo Downloading VS code ...
@@ -40,9 +40,9 @@ if %CH% == 1 (
     exit
 ) else if %CH% == 4 (
     echo Downloading Java 16
-    curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/jdk-16.0.2_windows-x64_bin.exe > jdk-16.0.2_windows-x64_bin.exe
-    jdk-16.0.2_windows-x64_bin.exe /s
-    del /f jdk-16.0.2_windows-x64_bin.exe
+    curl --silent -L https://github.com/DangDev/dangdev/releases/download/Minecraft/zulu17.30.15-ca-jdk17.0.1-win_x64.msi > jdk17.msi
+    msiexec /i jdk17.msi
+    del /f jdk17.msi
     echo Downloaded successfully!
     timeout 2
     exit
